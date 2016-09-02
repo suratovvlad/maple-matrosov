@@ -1,0 +1,390 @@
+%% Created by Maple 2015.0, Windows 8
+%% Source Worksheet: Example.mw
+%% Generated: Thu Apr 21 18:01:30 MSK 2016
+\documentclass{article}
+\usepackage{maplestd2e}
+\def\emptyline{\vspace{12pt}}
+\begin{document}
+\pagestyle{empty}
+\DefineParaStyle{Maple Heading 1}
+\DefineParaStyle{Maple Text Output}
+\DefineParaStyle{Maple Dash Item}
+\DefineParaStyle{Maple Bullet Item}
+\DefineParaStyle{Maple Normal}
+\DefineParaStyle{Maple Heading 4}
+\DefineParaStyle{Maple Heading 3}
+\DefineParaStyle{Maple Heading 2}
+\DefineParaStyle{Maple Warning}
+\DefineParaStyle{Maple Title}
+\DefineParaStyle{Maple Error}
+\DefineCharStyle{Maple Hyperlink}
+\DefineCharStyle{Maple 2D Math}
+\DefineCharStyle{Maple Maple Input}
+\DefineCharStyle{Maple 2D Output}
+\DefineCharStyle{Maple 2D Input}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{}{}
+\end{mapleinput}
+\end{maplegroup}
+\section{\textbf{040G0 (BC@<0-8C28;;O}}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{int(sin(x), x); 1}{\[\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{-cos(x)}{\[\displaystyle -\cos \left( x \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+\subsection{\textbf{@8<5@ 1}}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{restart;
+}{}
+\end{mapleinput}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+ 07;>68BL DC=:F8N\mapleinline{inert}{2d}{f(x) = 1}{$\displaystyle f \left( x \right) =1$}
+=0 >B@57:5\mapleinline{inert}{2d}{[a, b]}{$\displaystyle [a,b]$}
+2 @O4 ?> A>1AB25==K< DC=:F8O< 7040G8:}\end{Maple Normal}
+
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{d/dx*(x*d*y(x)/dx)+lambda*y(x)/x = 0, y(b) = 0, y(a) = 0}{$\displaystyle {\frac {{d}^{2}xy \left( x \right) }{{{\it dx}}^{2}}}+{\frac {\lambda\,y \left( x \right) }{x}}=0,\,y \left( b \right) =0,\,y \left( a \right) =0$}
+\mapleinline{inert}{2d}{}{$\displaystyle $}
+}\end{Maple Normal}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+04048< C@02=5=85:}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{eq:=diff(x*diff(y(x), x), x) + lambda*y(x)/x=0;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eq := diff(y(x), x)+x*(diff(y(x), x, x))+lambda*y(x)/x = 0}{\[\displaystyle {\it eq}\, := \,{\frac {\rm d}{{\rm d}x}}y \left( x \right) +x{\frac {{\rm d}^{2}}{{\rm d}{x}^{2}}}y \left( x \right) +{\frac {\lambda\,y \left( x \right) }{x}}=0\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+0E>48< >1I55 @5H5=85 C@02=5=8O:}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{res:=dsolve(eq, y(x));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{res := y(x) = _C1*sin(sqrt(lambda)*ln(x))+_C2*cos(sqrt(lambda)*ln(x))}{\[\displaystyle {\it res}\, := \,y \left( x \right) ={\it \_C1}\,\sin \left(  \sqrt{\lambda}\ln  \left( x \right)  \right) +{\it \_C2}\,\cos \left(  \sqrt{\lambda}\ln  \left( x \right)  \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{`Удобно`*`записать`*`общее`*`решение`*`так`}{$\displaystyle \mbox {{\tt #4>1=>}}\,\mbox {{\tt 70?8A0BL}}\,\\
+\mbox{}\mbox {{\tt >1I55}}\,\mbox {{\tt @5H5=85}}\,\\
+\mbox{}\mbox {{\tt B0:}}$}
+:}\end{Maple Normal}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{y:=x->
+C1*sin(lambda\symbol{94}(1/2)*ln(x/a))+C2*cos(lambda\symbol{94}(1/2)*ln(x/a));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{y := proc (x) options operator, arrow; C1*sin(sqrt(lambda)*ln(x/a))+C2*cos(sqrt(lambda)*ln(x/a)) end proc}{\[\displaystyle y\, := \,x\mapsto {\it C1}\,\sin \left( \pi \,\sqrt {{{k}^{2} \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-2}}}\ln  \left( {\frac {x}{a}} \right)  \right) \\
+\mbox{}+{\it C2}\,\cos \left( \pi \,\sqrt {{{k}^{2} \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-2}}}\ln  \left( {\frac {x}{a}} \right)  \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{eq;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{C1*sqrt(lambda)*cos(sqrt(lambda)*ln(x/a))/x-C2*sqrt(lambda)*sin(sqrt(lambda)*ln(x/a))/x+x*(-C1*sqrt(lambda)*cos(sqrt(lambda)*ln(x/a))/x^2-C1*lambda*sin(sqrt(lambda)*ln(x/a))/x^2+C2*sqrt(lambda)*sin(sqrt(lambda)*ln(x/a))/x^2-C2*lambda*cos(sqrt(lambda)*ln(x/a))/x^2)+lambda*(C1*sin(sqrt(lambda)*ln(x/a))+C2*cos(sqrt(lambda)*ln(x/a)))/x = 0}{\[\displaystyle {\frac {{\it C1}\, \sqrt{\lambda}}{x}\cos \left(  \sqrt{\lambda}\ln  \left( {\frac {x}{a}} \right)  \right) }-{\frac {{\it C2}\, \sqrt{\lambda}}{x}\sin \left(  \sqrt{\lambda}\ln  \left( {\frac {x}{a}} \right)  \right) }\\
+\mbox{}+x \left( -{\frac {{\it C1}\, \sqrt{\lambda}}{{x}^{2}}\cos \left(  \sqrt{\lambda}\ln  \left( {\frac {x}{a}} \right)  \right) }-{\frac {{\it C1}\,\lambda}{{x}^{2}}\sin \left(  \sqrt{\lambda}\ln  \left( {\frac {x}{a}} \right)  \right) }+{\frac {{\it C2}\, \sqrt{\lambda}}{{x}^{2}}\sin \left(  \sqrt{\lambda}\ln  \left( {\frac {x}{a}} \right)  \right) }-{\frac {{\it C2}\,\lambda}{{x}^{2}}\cos \left(  \sqrt{\lambda}\ln  \left( {\frac {x}{a}} \right)  \right) }\\
+\mbox{} \right) +{\frac {\lambda}{x} \left( {\it C1}\,\sin \left(  \sqrt{\lambda}\ln  \left( {\frac {x}{a}} \right)  \right) +{\it C2}\,\cos \left(  \sqrt{\lambda}\ln  \left( {\frac {x}{a}} \right)  \right)  \right) }=0\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{simplify(eq); 1}{\[\]}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{0 = 0}{\[\displaystyle 0=0\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{y(x);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{C1*sin(sqrt(lambda)*ln(x/a))+C2*cos(sqrt(lambda)*ln(x/a))}{\[\displaystyle {\it C1}\,\sin \left(  \sqrt{\lambda}\ln  \left( {\frac {x}{a}} \right)  \right) +{\it C2}\,\cos \left(  \sqrt{\lambda}\ln  \left( {\frac {x}{a}} \right)  \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+>;CG05< C@02=5=85 4;O >?@545;5=8O A>1AB25==KE 7=0G5=89 7040G8 (BC@<0-8C28;;O:}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{eq1:=y(a)=0; eq2:=y(b)=0;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eq1 := C2 = 0}{\[\displaystyle {\it eq1}\, := \,{\it C2}=0\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eq2 := C1*sin(sqrt(lambda)*ln(b/a))+C2*cos(sqrt(lambda)*ln(b/a)) = 0}{\[\displaystyle {\it eq2}\, := \,{\it C1}\,\sin \left(  \sqrt{\lambda}\ln  \left( {\frac {b}{a}} \right)  \right) +{\it C2}\,\cos \left(  \sqrt{\lambda}\ln  \left( {\frac {b}{a}} \right)  \right) \\
+\mbox{}=0\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{Delta:=subs(C2=0, eq2);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Delta := C1*sin(sqrt(lambda)*ln(b/a)) = 0}{\[\displaystyle \Delta\, := \,{\it C1}\,\sin \left(  \sqrt{\lambda}\ln  \left( {\frac {b}{a}} \right)  \right) =0\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{Typesetting:-mrow(Typesetting:-mi("Это", italic = "true", mathvariant = "italic"), Typesetting:-mo(" ", mathvariant = "normal", fence = "false", separator = "false", stretchy = "false", symmetric = "false", largeop = "false", movablelimits = "false", accent = "false", lspace = "0.0em", rspace = "0.0em"), Typesetting:-mi("уравнение", italic = "true", mathvariant = "italic"), Typesetting:-mo(" ", mathvariant = "normal", fence = "false", separator = "false", stretchy = "false", symmetric = "false", largeop = "false", movablelimits = "false", accent = "false", lspace = "0.0em", rspace = "0.0em"), Typesetting:-mi("для", italic = "true", mathvariant = "italic"), Typesetting:-mo(" ", mathvariant = "normal", fence = "false", separator = "false", stretchy = "false", symmetric = "false", largeop = "false", movablelimits = "false", accent = "false", lspace = "0.0em", rspace = "0.0em"), Typesetting:-mi("нахождения", italic = "true", mathvariant = "italic"), Typesetting:-mo(" ", mathvariant = "normal", fence = "false", separator = "false", stretchy = "false", symmetric = "false", largeop = "false", movablelimits = "false", accent = "false", lspace = "0.0em", rspace = "0.0em"), Typesetting:-mi("собственых", italic = "true", mathvariant = "italic"), Typesetting:-mo(" ", mathvariant = "normal", fence = "false", separator = "false", stretchy = "false", symmetric = "false", largeop = "false", movablelimits = "false", accent = "false", lspace = "0.0em", rspace = "0.0em"), Typesetting:-mi("значений", italic = "true", mathvariant = "italic"), Typesetting:-mo(".", mathvariant = "normal", fence = "false", separator = "false", stretchy = "false", symmetric = "false", largeop = "false", movablelimits = "false", accent = "false", lspace = "0.0em", rspace = "0.0em"))}{$\displaystyle \mbox {{\tt -B>}} \mathop{\rm  }\mbox {{\tt C@02=5=85}}\\
+\mbox{} \mathop{\rm  }\mbox {{\tt 4;O}} \mathop{\rm  }\mbox {{\tt =0E>645=8O}}\\
+\mbox{} \mathop{\rm  }\mbox {{\tt A>1AB25=KE}} \mathop{\rm  }\mbox {{\tt 7=0G5=89}}\\
+\mbox{} .$}
+ 5H05< ?>;CG5==>5 E0@0:B5@8AB8G5A:>5 C@02=5=85 8 >?@545;O5< A>1AB25==K5 7=0G5=8O:}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{lambda:=solve(Delta, lambda, AllSolutions) assuming a>0, b>a;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{lambda := Pi^2*_Z1^2/ln(b/a)^2}{\[\displaystyle \lambda\, := \,{{\pi }^{2}{{\it \_Z1}}^{2} \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-2}}\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+"0:8< >1@07><, ?>;CG8;8 A>1AB25==K5 7=0G5=8O}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{lambda:=subs(_Z1='k', lambda);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{lambda := Pi^2*k^2/ln(b/a)^2}{\[\displaystyle \lambda\, := \,{{\pi }^{2}{k}^{2} \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-2}}\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ev:=unapply(lambda, k);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{ev := proc (k) options operator, arrow; Pi^2*k^2/ln(b/a)^2 end proc}{\[\displaystyle {\it ev}\, := \,k\mapsto {{\pi }^{2}{k}^{2} \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-2}}\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+unapply - 45;05B DC=:F8N}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ev(m);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Pi^2*m^2/ln(b/a)^2}{\[\displaystyle {{\pi }^{2}{m}^{2} \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-2}}\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ev(7);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{49*Pi^2/ln(b/a)^2}{\[\displaystyle 49\,{{\pi }^{2} \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-2}}\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{}{\[\]}
+\end{mapleinput}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+>AB@>8< A>1AB25==K5 DC=:F88:}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{ef:=(x,k)->sin(Pi*k/ln(b/a)*ln(x/a));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{ef := proc (x, k) options operator, arrow; sin(Pi*k*ln(x/a)/ln(b/a)) end proc}{\[\displaystyle {\it ef}\, := \,( {x,k} )\mapsto \sin \left( {\pi \,k\ln  \left( {\frac {x}{a}} \right)  \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-1}} \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+@>25@8< 48DD5@5=F80;L=>5 C@02=5=85}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{y:='y':subs(lambda=ev(k), y(x)=ef(x,k), eq);
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{diff(sin(Pi*k*ln(x/a)/ln(b/a)), x)+x*(diff(sin(Pi*k*ln(x/a)/ln(b/a)), x, x))+Pi^2*k^2*sin(Pi*k*ln(x/a)/ln(b/a))/(ln(b/a)^2*x) = 0}{\[\displaystyle {\frac {\partial }{\partial x}}\sin \left( {\pi \,k\ln  \left( {\frac {x}{a}} \right)  \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-1}} \right) +x{\frac {\partial ^{2}}{\partial {x}^{2}}}\sin \left( {\pi \,k\ln  \left( {\frac {x}{a}} \right)  \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-1}} \right) +{\frac {{\pi }^{2}{k}^{2}}{x}\sin \left( {\pi \,k\ln  \left( {\frac {x}{a}} \right)  \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-1}} \right)  \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-2}}\\
+\mbox{}=0\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{simplify(value(lhs(%)));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{0}{\[\displaystyle 0\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+lhs - ;520O G0ABL C@02=5=8O, rhs - ?@020O G0ABL C@02=5=8O
+
+\% - ?>A;54=55 2KG8A;5==>5 ?>A;54=8<}\end{Maple Normal}
+
+\begin{Maple Normal}{
+}\end{Maple Normal}
+\begin{Maple Normal}{
+@>25@8< 3@0=8G=>5 CA;>285}\end{Maple Normal}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{simplify(ef(a,k));simplify(ef(b,k)) assuming k::posint;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{0}{\[\displaystyle 0\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{0}{\[\displaystyle 0\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+@>25@8< >@B>3>=0;L=>AO ?>;CG5==KE A>1AB25==KE DC=:F89 =0 >B@57:5\mapleinline{inert}{2d}{[a, b]}{$\displaystyle [a,b]$}
+A 25A><\mapleinline{inert}{2d}{1/x}{$\displaystyle {x}^{-1}$}
+}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{intJ:=Int(ef(x,n)*ef(x,m)/x, x=a..b);
+intJ:=simplify(value(intJ)) assuming a>0, b>a, m::posint, n::posint;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{intJ := Int(sin(Pi*n*ln(x/a)/ln(b/a))*sin(Pi*m*ln(x/a)/ln(b/a))/x, x = a .. b)}{\[\displaystyle {\it intJ}\, := \,\int_{a}^{b}\!{\frac {1}{x}\sin \left( {\pi \,n\ln  \left( {\frac {x}{a}} \right)  \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-1}} \right) \sin \left( {\pi \,m\ln  \left( {\frac {x}{a}} \right)  \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-1}} \right) \\
+\mbox{}}\,{\rm d}x\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{intJ := 0}{\[\displaystyle {\it intJ}\, := \,0\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{}{}
+\mapleinline{active}{2d}{latex('Int(sin(Pi*n*ln(x/a)/ln(b/a))*sin(Pi*m*ln(x/a)/ln(b/a))/x, x = a .. b)')}{${\it latex} \left( '\mathit{Int} (\mathit{sin} (Pi \ast n \ast \mathit{ln} (b \ast a\hat{~}{-1})\hat{~}{-1} \ast \mathit{ln} (x \ast a\hat{~}{-1})) \ast \mathit{sin} (Pi \ast m \ast \mathit{ln} (b \ast a\hat{~}{-1})\hat{~}{-1} \ast \mathit{ln} (x \ast a\hat{~}{-1})) \ast x\hat{~}{-1},\,x \, = \, a..b)' \right) $}
+\end{mapleinput}
+\mapleresult
+\symbol{92}int\_\{a\}\symbol{94}\{b\}\symbol{92}!\{\symbol{92}frac \{1\}\{x\}\symbol{92}sin \symbol{92}left( \{\symbol{92}pi \symbol{92},n\symbol{92}ln  \symbol{92}left( \{\symbol{92}frac \{x\}\{
+a\}\} \symbol{92}right)  \symbol{92}left( \symbol{92}ln  \symbol{92}left( \{\symbol{92}frac \{b\}\{a\}\} \symbol{92}right)  \symbol{92}right) \symbol{94}\{-1\}\}\symbol{92}right) \symbol{92}sin \symbol{92}left( \{\symbol{92}pi \symbol{92},m\symbol{92}ln  \symbol{92}left( \{\symbol{92}frac \{x\}\{a\}\} \symbol{92}right)\symbol{92}left( \symbol{92}ln  \symbol{92}left( \{\symbol{92}frac \{b\}\{a\}\} \symbol{92}right)  \symbol{92}right) \symbol{94}\{-1\}\} \symbol{92}right) \}\symbol{92},\{\symbol{92}rm d\}x\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+KG8A;8< :204@0B =>@<K}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{Norma2:=Int(ef(x,n)\symbol{94}2/x, x=a..b);
+Norma2:=simplify(value(Norma2)) assuming a>0, b>a, m::posint, n::posint;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Norma2 := Int(sin(Pi*n*ln(x/a)/ln(b/a))^2/x, x = a .. b)}{\[\displaystyle {\it Norma2}\, := \,\int_{a}^{b}\!{\frac {1}{x} \left( \sin \left( {\pi \,n\ln  \left( {\frac {x}{a}} \right)  \left( \ln  \left( {\frac {b}{a}} \right)  \right) ^{-1}} \right)  \right) ^{2}}\,{\rm d}x\]}
+\end{maplelatex}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Norma2 := (1/2)*ln(b)-(1/2)*ln(a)}{\[\displaystyle {\it Norma2}\, := \,1/2\,\ln  \left( b \right) -1/2\,\ln  \left( a \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{Maple Normal}{
+B45;L=> ?@>25@O5<\mapleinline{inert}{2d}{lambda = 0}{$\displaystyle \lambda=0$}
+}\end{Maple Normal}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{eq0:=diff(x*diff(y(x),x),x)=0;
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eq0 := diff(y(x), x)+x*(diff(y(x), x, x)) = 0}{\[\displaystyle {\it eq0}\, := \,{\frac {\rm d}{{\rm d}x}}y \left( x \right) +x{\frac {{\rm d}^{2}}{{\rm d}{x}^{2}}}y \left( x \right) =0\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{res0:=dsolve(eq0,y(x));
+}{}
+\end{mapleinput}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{res0 := y(x) = _C2*ln(x)+_C1}{\[\displaystyle {\it res0}\, := \,y \left( x \right) ={\it \_C2}\,\ln  \left( x \right) +{\it \_C1}\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{2d}{}{\[\]}
+\end{mapleinput}
+\end{maplegroup}
+\end{document}
